@@ -51,12 +51,12 @@
     xrdb -merge ~/.xterm.conf
   ```
 
-  First command loads Xdefault file what means all previous
+  First command loads Xdefault file what means previous
   configuration is reset to defaults before loading setup from 
   given file.
 
-  Second command merges prviously loaded settings with another
-  source of configuration, .xterm.conf.
+  Second command merges ~/.xterm.conf with previously loaded
+  settings.
 
   Xrdb comand must be launched manualy by user otherwise default,
   poor and ugly setup will be in use. 
@@ -67,7 +67,7 @@
   Remember. Any time you change anything in any loaded or merged
   files you must run xrdb command again but don't use -load.
   Merge (-merge) file instead of loading it otherwise all other
-  settings from all other file will be removed.
+  settings from all other files will be removed.
 
 # CLASSES
 
