@@ -18,40 +18,40 @@
 # HOW IT WORKS
 
   XTerm is a X11 application. Not GTK or QT but X11.
-  This mean as any X11 application it use ~/.Xdefault
+  This mean as any X11 application it use ~/.Xdefaults
   file to configure many aspects of X application.
 
   Probably for most people X apps look bad. Poor font rendering,
   leak of antialiasing, ugly look. By default it is true.
 
   But. But it is possible to change that. All what you need
-  is to edit ~/.Xdefault file.
+  is to edit ~/.Xdefaults file.
 
-  Of course it does nothing because ~/.Xdefault doesn't work
+  Of course it does nothing because ~/.Xdefaults doesn't work
   as standard config file. By standard I mean the file that is read
   by program.
 
-  X apps do not read ~/.Xdefault. This file is for X server and must
+  X apps do not read ~/.Xdefaults. This file is for X server and must
   be loaded manualy by user.
 
-  To load ~/.Xdefault setup you need to use *xrdb* program:
+  To load ~/.Xdefaults setup you need to use *xrdb* program:
 
   ```sh
-    xrdb -load ~/.Xdefault
+    xrdb -load ~/.Xdefaults
   ```
 
-  This folder contains *xterm.conf* file not Xdefault. It is
+  This folder contains *xterm.conf* file not Xdefaults. It is
   because you decide what file you want to use as a source
   of your X apps configuration.
 
   This mean you can save xterm.conf as ~/.xterm.conf and merge
-  it with previously loaded Xdefault:
+  it with previously loaded Xdefaults:
 
   ```sh
     xrdb -merge ~/.xterm.conf
   ```
 
-  First command loads Xdefault file what means previous
+  First command loads Xdefaults file what means previous
   configuration is reset to defaults before loading setup from 
   given file.
 
