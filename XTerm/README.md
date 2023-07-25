@@ -110,3 +110,29 @@
     ...
   ```
 
+  ## Dark and Light mode
+
+  This script reads my own custom *.settings* resource.
+  Here is example:
+
+  ```
+    XTerm.vt100.settings: colorscheme=dark,mode=user,initsize=24x120
+  ```
+
+  Script creates environment variable XTERM_COLORSCHEME and set it
+  to defined value.
+
+  You can read this variable for example from VimScript to set
+  different vim's colorscheme for light and dark mode.
+
+  ```vim
+    if $XTERM_COLORSCHEME == 'light'
+      set background=light
+      colorscheme l_xcode_default
+      call MySetTransparent()
+    else
+      set background=dark
+      colorscheme d_sialoquent
+      call MySetTransparent()
+    endif
+  ```
